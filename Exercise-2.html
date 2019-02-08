@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+<style>
+body {
+		font-family: 'Fjalla One';
+		text-align: center;
+}
+.form {
+	border :3px solid black;
+margin:40px 450px 0px 450px ;
+padding:0px 0px 10px 0px ;
+	border-radius:80px;
+	background-color: cyan; 
+}
+    input{
+      border:0;
+      padding: 10px;
+      font-size: 18px;
+      }
+    input[type="submit"]
+    {
+      background:red;
+      color:white;
+      border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+	<h1> Form Validation</h1>
+	<div class="form">
+	<form>
+	<h2>Name :          
+	<input type="text" placeholder="Anubhav Thakur" id="a"><br>
+	</h2>
+	<h2>Email :
+	<input type="Email" placeholder="blabla@gmail.com" id="b"><br>
+	</h2>
+	<h2>Mobile :
+	<input type="number" placeholder="9876543210" id="c"><br>
+	</h2>
+	<input type="submit" onclick="valid()">
+</form>
+</div>
+	<script>
+		function valid()
+		{
+			var a1=document.getElementById("a").value;
+			var a2=document.getElementById("b").value;
+			var a3=document.getElementById("c").value;
+			var validate =0;
+			if (a1=="")
+			{
+				alert("Name cannot be empty.");
+				validate++;
+			}
+			else if(a1.length<=3)
+			{
+				alert("Invalid Name!!");
+				validate++;
+			}
+			else if(a2.indexOf("@")==0||a2.indexOf("@")==-1)
+			{
+				alert("Invalid Email!!");
+				validate++;
+			}
+			else if(a2.lastIndexOf(".")<(a2.indexOf("@")+3))
+			{
+				alert("Invalid Email!! Missing .");
+				validate++;
+			}
+			else if(a2.charAt(a2.length-4)!="."&&a2.charAt(a2.length-3)!=".")
+			{
+				alert("Invalid email missing .in or .com");
+				validate++;
+			}
+			else if(a3.length<10||a3.length>10)
+			{
+				alert("Invalid Mobile Number");
+				validate++;
+			}
+			if(validate==0)
+			{
+				alert("Thank You Your Response has been Submitted.");
+			}
+		}
+	</script>
+</body>	
