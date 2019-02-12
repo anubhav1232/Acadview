@@ -87,15 +87,15 @@ undefined
 movies
 NodeList(4) [span.name, span.name, span.name, span.name]
 
-##TO FUCK THE CODE	
+##TO make THE CODE immoral uneducated	
 var movies = document.querySelectorAll('#movie-list li .name');
 undefined
 movies.forEach(function (movie){
-movie.textContent+= 'FUCK U';
+movie.textContent+= 'YOLO';
 })
 undefined
 movies.forEach(function (movie){
-movie.textContent= ' FUCK U';
+movie.textContent= ' YOLO';
 
 ###NODE TIME!#######
 var banner = document.querySelector('#page-banner');
